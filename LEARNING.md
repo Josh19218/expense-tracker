@@ -56,3 +56,19 @@
 - try/except lets code fail gracefully: try the risky code, and except catches a specific error type instead of crashing
 - return inside a function exits it immediately — used here to stop before adding bad data to the list
 - Always save the file before running it — an unsaved VS Code tab shows a dot instead of an X
+
+## Day 4 — Menu Loop & Viewing Expenses
+
+**What I did:**
+
+- Built a while True loop that shows a menu and keeps running until the user exits
+- Added if/elif/else to route user choice to different functions
+- Built view_expenses() to loop through and display all stored expenses
+
+**Concepts I learned:**
+
+- while True: creates an infinite loop that only stops when something inside it calls break
+- User input from input() is always a string, so menu choices need to be compared as strings (e.g. "1", not 1)
+- if not expenses: checks if a list is empty
+- for expense in expenses: loops through each dictionary in the list
+- f-strings (f"...") let you insert variables directly into text using {curly braces}
