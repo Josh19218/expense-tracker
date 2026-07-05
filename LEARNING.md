@@ -23,3 +23,18 @@
 
 - .gitignore tells git which files to never track
 - if **name** == "**main**": means "only run this code if the file is run directly"
+
+## Day 2 — Adding Expenses
+
+**What I did:**
+
+- Built add_expense() function using input(), a dictionary, and a list
+- Debugged a real bug: main() wasn't calling add_expense(), so nothing happened after the welcome message
+
+**Concepts I learned:**
+
+- Dictionaries store key-value pairs, e.g. {"amount": 20, "category": "food"}
+- Lists can hold multiple dictionaries — expenses.append(expense) adds one to the list
+- input() always returns a string, even for numbers
+- Python uses indentation to define what's inside a function — a function existing isn't enough, it has to actually be called
+- Mixing indentation styles (spaces vs tabs, 2 vs 4 spaces) causes IndentationError
