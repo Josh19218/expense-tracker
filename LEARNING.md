@@ -120,3 +120,15 @@
 - dict.get(key, default) safely reads a dictionary value, returning a default instead of crashing if the key doesn't exist yet
 - dict.items() loops through a dictionary giving both the key and value at once
 - Building a "grouped total" (category -> amount) is a common pattern: start with an empty dict, then accumulate into it as you loop
+
+## Day 8 — README & Wrapping Up v1
+
+**What I did:**
+
+- Wrote a proper README.md explaining what the project does, how to run it, and what I learned
+- Viewed the finished repo on GitHub as a rendered project page for the first time
+
+**Concepts I learned:**
+
+- Code fences (\`\`\`) make text render as a formatted code block on GitHub
+- A good README is often the first thing an employer or visitor sees — it should explain what, how, and why, not just be an afterthought
