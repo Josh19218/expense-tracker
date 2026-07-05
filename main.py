@@ -1,7 +1,11 @@
 expenses = []
 
 def add_expense():
-  amount = input("Enter amount: ")
+  try:
+    amount = float(input("Enter amount: "))
+  except ValueError:
+    print("That's not a valid number. Please enter a numeric amount.")
+    return
   category = input("Enter category: ")
   description = input("Enter description: ")
 
