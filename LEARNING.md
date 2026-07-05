@@ -72,3 +72,21 @@
 - if not expenses: checks if a list is empty
 - for expense in expenses: loops through each dictionary in the list
 - f-strings (f"...") let you insert variables directly into text using {curly braces}
+
+## Day 5 — Saving & Loading Data with JSON
+
+**What I did:**
+
+- Added save_expenses() using json.dump() to write the expenses list to a file
+- Added load_expenses() using json.load() to read it back on startup
+- Hit and fixed a NameError caused by calling load_expenses() before it was defined
+- Confirmed data persists correctly across program restarts
+
+**Concepts I learned:**
+
+- Python executes files top to bottom — a function must be defined before it's called, unless the call is inside another function (like main()) that only runs later
+- with open(...) as file: safely opens a file and automatically closes it afterward
+- "w" mode writes/overwrites a file, "r" mode reads it
+- json.dump() converts Python data into JSON and writes it to a file
+- json.load() reads JSON from a file back into Python data (lists/dictionaries)
+- try/except FileNotFoundError handles the case where a file doesn't exist yet, instead of crashing
