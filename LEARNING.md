@@ -38,3 +38,21 @@
 - input() always returns a string, even for numbers
 - Python uses indentation to define what's inside a function — a function existing isn't enough, it has to actually be called
 - Mixing indentation styles (spaces vs tabs, 2 vs 4 spaces) causes IndentationError
+
+## Day 3 — Type Conversion & Error Handling
+
+**What I did:**
+
+- Fixed a bug where I hadn't saved the file before running it (VS Code shows an unsaved dot on the tab)
+- Converted amount input from a string to a float using float()
+- Intentionally crashed the program by entering non-numeric input, then read the traceback to find the cause
+- Added try/except to handle invalid input gracefully instead of crashing
+
+**Concepts I learned:**
+
+- input() always returns a string — float() converts it to a real number for math
+- "20" + "30" gives "2030" (text joining) but 20 + 30 gives 50 (real math) — this is why type matters
+- Python tracebacks read bottom-to-top for the actual error, top-to-bottom for the call chain
+- try/except lets code fail gracefully: try the risky code, and except catches a specific error type instead of crashing
+- return inside a function exits it immediately — used here to stop before adding bad data to the list
+- Always save the file before running it — an unsaved VS Code tab shows a dot instead of an X
