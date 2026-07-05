@@ -106,3 +106,17 @@
 - expenses.pop(index) removes an item at that index AND returns it, so I can confirm what was deleted
 - del list[index] also removes an item but doesn't return it — pop is more useful when you need the removed value
 - Checking choice < 1 or choice > len(expenses) prevents crashes from out-of-range input
+
+## Day 7 — Summary View & Feature-Complete v1
+
+**What I did:**
+
+- Built view_summary() to calculate total spending and a breakdown by category
+- Completed the core feature set: add, view, delete, save/load, and summarize expenses
+
+**Concepts I learned:**
+
+- += is shorthand for "add to the existing value" (total += x means total = total + x)
+- dict.get(key, default) safely reads a dictionary value, returning a default instead of crashing if the key doesn't exist yet
+- dict.items() loops through a dictionary giving both the key and value at once
+- Building a "grouped total" (category -> amount) is a common pattern: start with an empty dict, then accumulate into it as you loop
