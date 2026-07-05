@@ -40,12 +40,36 @@ def load_expenses():
 
 expenses = load_expenses()
 
+def delete_expense():
+  if not expenses:
+    print("No expenses to delete.")
+    return
+  
+  for i, expense in enumerate(expenses):
+    print(f"{i + 1}. {expense['description']} - {expense['amount']} ({expense['category']})")
+
+  try:
+    choice = int(input("Enter the number of the expense to delete: "))
+  except ValueError:
+    print("That's not a valid number.")
+    return
+  
+  if choice < 1 or choice > len(expenses):
+    print("Invalid choice.")
+    return
+  
+  removed = expenses.pop(choice - 1)
+  save_expenses()
+  print(f"Deleted: {removed['description']}")
+
+
 def main():
   while True:
     print("\nExpense Tracker")
     print("1. Add expense")
     print("2. View expenses")
-    print("3. Exit")
+    print("3. Delete expense")
+    print("4. Exit")
 
     choice = input("Choose an option:")
 
@@ -54,6 +78,8 @@ def main():
     elif choice == "2":
       view_expenses()
     elif choice == "3":
+      delete_expense()
+    elif choice == "4":
       print("Goodbye!")
       break
     else:
