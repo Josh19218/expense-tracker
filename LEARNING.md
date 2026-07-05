@@ -90,3 +90,19 @@
 - json.dump() converts Python data into JSON and writes it to a file
 - json.load() reads JSON from a file back into Python data (lists/dictionaries)
 - try/except FileNotFoundError handles the case where a file doesn't exist yet, instead of crashing
+
+## Day 6 — Deleting Expenses & List Indexing
+
+**What I did:**
+
+- Built delete_expense() to remove an item from the expenses list
+- Displayed expenses with user-friendly numbering while using real list indexes behind the scenes
+- Validated user input for invalid or out-of-range choices
+
+**Concepts I learned:**
+
+- List items are numbered starting at 0 (index), not 1 — so I show i + 1 to users but convert back with choice - 1 for the real index
+- enumerate(list) gives both the index and the item while looping, e.g. for i, expense in enumerate(expenses)
+- expenses.pop(index) removes an item at that index AND returns it, so I can confirm what was deleted
+- del list[index] also removes an item but doesn't return it — pop is more useful when you need the removed value
+- Checking choice < 1 or choice > len(expenses) prevents crashes from out-of-range input
