@@ -1,4 +1,4 @@
-expenses = []
+import json
 
 def add_expense():
   try:
@@ -17,6 +17,7 @@ def add_expense():
 
   expenses.append(expense)
   print("Expense added!")
+  save_expenses()
 
 def view_expenses():
   if not expenses:
@@ -25,6 +26,19 @@ def view_expenses():
   
   for expense in expenses:
     print(f"{expense['description']} - {expense['amount']}  ({expense['category']})")
+
+def save_expenses():
+  with open("expenses.json", "w") as file:
+    json.dump(expenses, file)
+
+def load_expenses():
+  try:
+    with open("expenses.json", "r") as file:
+      return json.load(file)
+  except FileNotFoundError:
+    return[]
+
+expenses = load_expenses()
 
 def main():
   while True:
