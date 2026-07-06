@@ -34,4 +34,4 @@ A full breakdown of what I learned at each stage is in [LEARNING.md](LEARNING.md
 
 - Add editing of existing expenses
 - Add date tracking and filtering by date range
-- Rebuild as a web API (in progress — see [expense-tracker-api](#))
+- Rebuild as a web API (in progress — see [expense-tracker-api]([#](https://github.com/Josh19218/expense-tracker-api)))
