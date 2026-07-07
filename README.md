@@ -33,6 +33,7 @@ A full breakdown of what I learned at each stage is in [LEARNING.md](LEARNING.md
 ## Related project
 
 This project was later rebuilt as a full web API with a real database and authentication — see [Expense Tracker API](https://github.com/Josh19218/expense-tracker-api).
+
 A [React frontend](https://github.com/Josh19218/expense-tracker-frontend) also connects to this API, providing a web interface for logging in and managing expenses.
 
 ## Possible future improvements
